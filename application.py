@@ -8,7 +8,7 @@ from PIL import Image
 import pandas as pd
 
 #Load the saved model
-#model = pickle.load(open(r'C:\Users\laksh\VS_Code\Machine_Learning\House_Prediction\multi_linear_regression_model.pkl', 'rb'))
+model = pickle.load(open(r'C:\Users\laksh\VS_Code\Machine_Learning\House_Prediction\multi_linear_regression_model.pkl', 'rb'))
 House_data = pd.read_csv(r"D:\Data_Science&AI\ClassRoomMaterial\September\6th- Simple_Linear_regression\6th- slr\SLR - House price prediction\House_data.csv")
 
 # Set the title of the Streamlit app

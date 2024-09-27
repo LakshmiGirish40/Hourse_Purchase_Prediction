@@ -8,7 +8,7 @@ from PIL import Image
 import pandas as pd
 
 #Load the saved model
-model = pickle.load(open(r'C:\Users\laksh\VS_Code\Machine_Learning\House_Prediction\multi_linear_regression_model.pkl', 'rb'))
+#model = pickle.load(open(r'C:\Users\laksh\VS_Code\Machine_Learning\House_Prediction\multi_linear_regression_model.pkl', 'rb'))
 House_data = pd.read_csv(r"D:\Data_Science&AI\ClassRoomMaterial\September\6th- Simple_Linear_regression\6th- slr\SLR - House price prediction\House_data.csv")
 
 # Set the title of the Streamlit app
@@ -62,7 +62,7 @@ Floor = st.number_input("Floor", min_value=0, max_value=4, value=1)
 if st.button("**Predict Price**"):
     # Make a prediction using the trained model
    input_data = np.array([[square_feet]])  # Convert the input to a 2D array for prediction 
-   prediction = model.predict(input_data)
+   prediction = House_data.predict(input_data)
    st.success(f"Price  predicted  for  {square_feet}sqft  is :  ${prediction[0]:,.2f}",icon= "🏠")
     
 st.write("<h5 style='text-align: left; color: black;'>The House Dataset </h5>", unsafe_allow_html=True) 
